@@ -10,6 +10,11 @@ On the main folder create a .env file with the following enviorment varaibles
     the height of the grid on number of cells
 * ### PERIOD
     the period of the program loop on seconds. Can be written in decimal values.
+* ### BOUNDARY
+    the behavior of the grid on the boundary of it.
+    ** 'fill' This option asumes that the cells outside the grid are all dead.
+    ** 'wrap' This options wraps the grid shaping a toroide (donut), i.e the left boundary conects with the right and the top with the bottom boundary.
+
 ### alives file
   * Create a file called alives and save on it the position (row, column) base 0 of the alives cells on the first iteration.
   * Each line is a cell and the row and column values are separated by a space.

@@ -10,6 +10,7 @@ de.load_dotenv()
 GRID_WIDTH = int(os.getenv('GRID_WIDTH'))
 GRID_HEIGHT = int(os.getenv('GRID_HEIGHT'))
 PERIOD = float(os.getenv('PERIOD'))
+BOUNDARY = os.getenv('BOUNDARY')
 
 def show_grid(grid: np.ndarray):
     os.system('cls')
@@ -31,9 +32,9 @@ if __name__ == '__main__':
     #main loop
     while True:
         #Counts the number of neigboors of each cell 
-        count = ss.convolve2d(state, kernel, mode = 'same', boundary='wrap')
+        count = ss.convolve2d(state, kernel, mode = 'same', boundary = BOUNDARY)
 
-        # All Conway's game of life rules are checked with this logica line
+        # All Conway's game of life rules are checked with this logical line
         # 1. Any live cell with two or three live neighbors survives.
         # 2. Any dead cell with three live neighbors becomes a live cell.
         # 3. All other live cells die in the next generation due to underpopulation (fewe than two live neighbors)
