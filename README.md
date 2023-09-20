@@ -13,7 +13,7 @@ On the main folder create a .env file with the following enviorment varaibles
 ### alives file
   * Create a file called alives and save on it the position (row, column) base 0 of the alives cells on the first iteration.
   * Each line is a cell and the row and column values are separated by a space.
-* #### e.g: This will generate a starship:
+* #### e.g: This will generate a starship on a 10 x 10 grid of cells:
           5 8
           6 8
           7 8
