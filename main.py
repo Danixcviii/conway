@@ -29,8 +29,12 @@ if __name__ == '__main__':
     #Generates the kernel of the convolution
     kernel = np.ones((3, 3), dtype = np.int8); kernel[1, 1] = 0
 
+    show_grid(state)
+    time.sleep(2)
+
     #main loop
     while True:
+
         #Counts the number of neigboors of each cell 
         count = ss.convolve2d(state, kernel, mode = 'same', boundary = BOUNDARY)
 
